@@ -26,9 +26,9 @@
     <div className="search-container">
       {/* disply input option for UI */}
       {/* <GetLocation onSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?id=524901&q=${city}&cnt=5&appid=${API_KEY}`)} /> */}
-      
+
       {/* changed this because the api is not responding on live demo (netlify) */}
-    <GetLocation onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/forecast?id=524901&q=${city}&cnt=5&appid=a0c3e2cff8edd3613ab360e2619635cb`)} />
+    <GetLocation onSearch={(city) => setUrl(`https://api.openweathermap.org/data/2.5/forecast?id=524901&q=${city}&cnt=5&appid=a0c3e2cff8edd3613ab360e2619635cb`)} />
 
     </div>
     <div className="card-container">
