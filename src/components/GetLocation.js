@@ -14,7 +14,7 @@ const GetLocation = ({onSearch}) => {
               value={city}
             />
           </Col>
-          <Col>
+          <Col xs="auto">
             <Button onClick={() => onSearch(city)}>Fetch Weather</Button>
           </Col>
         </Row>

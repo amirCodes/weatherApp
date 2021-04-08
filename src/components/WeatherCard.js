@@ -4,6 +4,7 @@ import {Card} from 'react-bootstrap';
 const WeatherCard = ({dt, temp_min, temp_max,humidity, main,description, icon}) => {
   // create a date object with Date class constructor
   const date = new Date(dt);
+
   return (
     <Card>
       <Card.Img
@@ -18,10 +19,10 @@ const WeatherCard = ({dt, temp_min, temp_max,humidity, main,description, icon}) 
           {date.toLocaleDateString()} - {date.toLocaleTimeString()}
         </p>
         {/* minimum temperature */}
-        <p>Temperatur Min: {temp_min}</p>
+        <p>Temperatur Min: {Math.round(temp_min - 273.15)} °C</p>
         {/* maximum temperature */}
-        <p>Temperature Max: {temp_max}</p>
-        <p>Humidity: {humidity}</p>
+        <p>Temperature Max: {Math.round(temp_max - 273.15)} °C</p>
+        <p>Humidity: {humidity} %</p>
       </Card.Body>
     </Card>
   );

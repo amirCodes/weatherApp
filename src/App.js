@@ -7,7 +7,7 @@
   import WeatherList from './components/WeatherList';
   import GetLocation from './components/GetLocation';
   import FetchDara from './components/FetchData';
-
+ 
   const App = () => {
     // call our API and and fetch our data 
     const {data, error, isLoading, setUrl} = FetchDara();
