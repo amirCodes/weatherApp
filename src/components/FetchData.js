@@ -6,7 +6,7 @@ const FetchData = (initialUrl) => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const [url, setUrl] = useState(initialUrl);
-
+  console.log(url);
   useEffect(() => {
     if(!url) return;
     setIsLoading(true);
@@ -17,7 +17,6 @@ const FetchData = (initialUrl) => {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-
             // error handling for nonexistent data
             setIsLoading(false);
             if(data.cod >= 400) {
@@ -31,7 +30,7 @@ const FetchData = (initialUrl) => {
             setError(error);
         });
   }, [url]);
-
+  console.log(data);
   return { data, error, isLoading, setUrl };
 };
 
