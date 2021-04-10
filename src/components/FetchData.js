@@ -6,14 +6,14 @@ const FetchData = (initialUrl) => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const [url, setUrl] = useState(initialUrl);
-  console.log(url);
+
   useEffect(() => {
     if(!url) return;
     setIsLoading(true);
     // clear old search
     setData(null);
     setError(null);
-
+    
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
@@ -30,7 +30,7 @@ const FetchData = (initialUrl) => {
             setError(error);
         });
   }, [url]);
-  console.log(data);
+
   return { data, error, isLoading, setUrl };
 };
 
