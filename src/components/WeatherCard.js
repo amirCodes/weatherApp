@@ -6,7 +6,7 @@ const WeatherCard = ({dt, temp_min, temp_max,humidity, main,description, icon, c
   const date = new Date(dt);
   
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem', marginBottom:'3px' }}>
       <Card.Img
         variant="top"
         // get the src from example url and pass the icon prop for icon code
